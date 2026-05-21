@@ -1,6 +1,8 @@
 import DashboardCard from '../components/DashboardCard'
 
 function Dashboard() {
+  const user =
+  JSON.parse(localStorage.getItem('user')) || {}
 
   const skills =
     JSON.parse(
@@ -49,8 +51,8 @@ const internshipReadiness = Math.min(
 
       <div className="dashboard-header">
         <h1>
-          Welcome back, Srijan
-        </h1>
+  Welcome back, {user.name || 'Student'}
+</h1>
 
         <p>
           Track your engineering
